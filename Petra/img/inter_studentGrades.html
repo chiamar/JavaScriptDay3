@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student pointss</title>
+
+</head>
+
+<body>
+
+  <script>
+    var Martin = 76;
+    var Thomas = 85;
+    var Klaus = 65;
+    var Maria = 93;
+    var David = 81;
+
+    function grade(points) {
+
+      switch (true) {
+        case (points < 60):
+          return "F";
+          break;
+        case (points < 70):
+          return "D";
+          break;
+        case (points < 80):
+          return "C";
+          break;
+        case (points < 90):
+          return "B";
+          break;
+        case (points < 100):
+          return "A";
+          break;
+        default:
+          return "A+";
+          break;
+      }
+    }
+
+    console.log("Martin: " + grade(Martin));
+    console.log("Thomas: " + grade(Thomas));
+    console.log("Klaus: " + grade(Klaus));
+    console.log("Maria: " + grade(Maria));
+    console.log("David: " + grade(David));
+
+    var students = [Martin, Thomas, Klaus, Maria, David];
+    var total = new Number;
+    var avg = new Number;
+
+    for (var points of students) {
+      total += points;
+      avg = total/students.length;
+    }
+    console.log("Total points: " + total);
+    console.log("Average points: " + avg);
+    console.log("Average grade: " + grade(avg));
+
+  </script>
+
+</body>
+
+</html>
