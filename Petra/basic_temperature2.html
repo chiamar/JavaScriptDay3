@@ -29,22 +29,22 @@
 
     if (num <= 0) {
       message += "freezing";
-      src = "icon_cold.png"
+      src = "img/icon_cold.png"
     } else if (num <= 10) {
       message += "cold";
-      src = "icon_cool.png"
+      src = "img/icon_cool.png"
     } else if (num <= 20) {
       message += "moderate";
-      src = "icon_optimal.png"
+      src = "img/icon_optimal.png"
     } else if (num <= 30) {
       message += "warm";
-      src = "icon_warm.png"
+      src = "img/icon_warm.png"
     } else if (num <= 35) {
       message += "hot";
-      src = "icon_hot.png" 
+      src = "img/icon_hot.png" 
     } else {
       message += "extreme";
-      src = "icon_extreme.png"
+      src = "img/icon_extreme.png"
     }
 
     document.getElementById("temp").innerHTML = num + "°C";
