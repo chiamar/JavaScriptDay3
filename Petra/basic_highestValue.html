@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highest value in an array</title>
+</head>
+
+<body>
+
+  <script>
+    var arr = [1, 7, -3, 9];
+    // var max = Math.max(...arr);
+    // console.log(max);
+
+    var max = 0; 
+    // 9
+
+    for (var val of arr) {
+      if (val > max) {
+        max = val;
+      }
+    }
+
+    console.log(max)
+    // 1. val=1   val > max true
+    // 2. val=7   val > max true
+    // 3. val=-3  val > max false 
+    // 4. val=9   val > max true
+
+  </script>
+
+</body>
+
+</html>
