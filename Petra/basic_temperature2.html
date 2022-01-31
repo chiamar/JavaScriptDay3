@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature v2.0</title>
+  <style>
+    body {
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <p id="temp"></p>
+  <p id="message"></p>
+  <img id="pic" src="temperature.png">
+
+  <script>
+    var num = Math.floor(Math.random() * 61) - 20;
+    // console.log(num);
+
+    var message = "The weather is "
+
+    if (num <= 0) {
+      message += "freezing";
+      src = "icon_cold.png"
+    } else if (num <= 10) {
+      message += "cold";
+      src = "icon_cool.png"
+    } else if (num <= 20) {
+      message += "moderate";
+      src = "icon_optimal.png"
+    } else if (num <= 30) {
+      message += "warm";
+      src = "icon_warm.png"
+    } else if (num <= 35) {
+      message += "hot";
+      src = "icon_hot.png" 
+    } else {
+      message += "extreme";
+      src = "icon_extreme.png"
+    }
+
+    document.getElementById("temp").innerHTML = num + "°C";
+    document.getElementById("message").innerHTML = message;
+    document.getElementById("pic").src = src;
+
+  </script>
+
+</body>
+
+</html>
