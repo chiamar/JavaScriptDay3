@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student pointss</title>
+  <title>Student points</title>
 
 </head>
 
@@ -50,15 +50,16 @@
 
     var students = [Martin, Thomas, Klaus, Maria, David];
     var total = new Number;
-    var avg = new Number;
-
+    
     for (var points of students) {
       total += points;
-      avg = total/students.length;
+      var avg = total / students.length;
+      var grd = grade(avg);
     }
+
     console.log("Total points: " + total);
     console.log("Average points: " + avg);
-    console.log("Average grade: " + grade(avg));
+    console.log("Average grade: " + grd);
 
   </script>
 
